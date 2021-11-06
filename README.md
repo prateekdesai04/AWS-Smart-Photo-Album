@@ -1,5 +1,4 @@
 # AWS-Smart-Photo-Album
-Smart Photo Album
 
 ### A Voice based Photo Album using AWS Services | Cloud Computing and Big Data Systems
 
