@@ -1,10 +1,14 @@
-version: 0.1
+version: 0.2
 phases:
   install:
+    runtime-versions:
+        python: 3.8
+  build:
     commands:
-      - aws cloudformation package --template-file samTemplate.yaml --s3-bucket nyu-photo-album --output-template-file outputsamtemplate.yaml
+      - pip install --upgrade pip
+      - pip install pipenv --user
+      - pipenv install awscli aws-sam-cli
+      - pipenv run sam package --template-file samTemplate.yaml --s3-bucket nyu-photo-album --output-template-file packaged-template.yml
 artifacts:
-  # type: zip
   files:
-    - samTemplate.yaml
-    - outputsamtemplate.yaml
+    - packaged-template.yml
