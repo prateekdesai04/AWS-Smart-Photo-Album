@@ -24,7 +24,7 @@ renderNotes(notes);
 /*-----------------------------
       Voice Recognition
 ------------------------------*/
-
+// Test for pipeline
 // If false, the recording will stop after a few seconds of silence.
 // When true, the silence period is longer (about 15 seconds),
 // allowing us to keep recording even when the user pauses.
